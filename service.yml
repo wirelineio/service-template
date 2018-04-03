@@ -1,0 +1,18 @@
+#
+# Copyright 2017 Wireline, Inc.
+#
+
+name: service-template # Change me!
+platform: nodejs
+buildTool: webpack
+version: 0.0.1
+
+functions:
+  test:
+    handler: handler.test
+    description: "Test service."
+    events:
+      - http:
+          path: test
+          method: get
+          cors: true

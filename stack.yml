@@ -1,0 +1,17 @@
+#
+# Copyright 2017 Wireline, Inc.
+#
+
+name: stack-template # Change me!
+domain: example.org
+stage: dev
+
+provider:
+  name: aws
+  region: us-east-1
+
+stack:
+  my-deployment:
+    deployment:
+      image: wrn::service-template # Change me!
+      version: 0.0.1
