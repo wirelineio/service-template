@@ -3,7 +3,7 @@
 #
 
 name: stack-template # Change me!
-domain: example.org
+domain: example.com
 stage: dev
 
 provider:

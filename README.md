@@ -41,7 +41,7 @@ my-deployment                   wrn::service-template           0.0.1           
 ```
 
 ```
-$ babel-node /Users/ashwinp/projects/wireline/darkstar/@wirelineio/cli/src/main.js stack deploy
+$ WRL_ACCESS_KEY=abc123 babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.js stack deploy
 
 Name                            Service                         Version         Status          Content Hash                                                            Endpoint
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
