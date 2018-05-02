@@ -23,11 +23,11 @@ $ WRL_ACCESS_KEY=abc123 babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.
 ```
 
 ```
-$ WRL_ACCESS_KEY=abc123 babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.js service register --domain example.org
+$ WRL_ACCESS_KEY=abc123 babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.js service register --domain example.com
 
 Domain           Name                            Version         Content Hash                                                            Versions
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-example.org      service-template                0.0.1           52cdbe12f3119fb929edccd5d3be5206a02b30665006ee21796e6720f3813bde
+example.com      service-template                0.0.1           52cdbe12f3119fb929edccd5d3be5206a02b30665006ee21796e6720f3813bde
 ```
 
 ## Stack Deploy
