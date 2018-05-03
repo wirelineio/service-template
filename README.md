@@ -1,5 +1,34 @@
 # Wireline Service Template.
 
+## INTERNAL ONLY
+
+The `darkstar` framework packages are currently internal to the Wireline team; they require private access to the @wirelineio org.
+
+### Private Repos
+
+https://www.npmjs.com/org/wirelineio
+
+~~~~
+npm login                       # NOTE: Must preceed yarn login.
+yarn login
+~~~~
+
+Check auth tokens: `~/.npmrc`
+
+
+### Local Repos
+
+To use local repositories:
+
+~~~~
+cd darkstar
+yarn install
+
+cd darkstar/@wirelineio/sdk
+yarn link
+~~~~
+
+
 ## Setup
 
 ### Install Packages
@@ -62,31 +91,4 @@ $ curl -s -XGET -H'Authorization: abc123' https://1k06alat20.execute-api.us-east
 }
 ```
 
-## INTERNAL ONLY
 
-This package is currently internal to the Wireline team; it requires private access to the @wirelineio org.
-
-
-### Private Repos
-
-https://www.npmjs.com/org/wirelineio
-
-~~~~
-npm login                       # NOTE: Must preceed yarn login.
-yarn login
-~~~~
-
-Check auth tokens: `~/.npmrc`
-
-
-### Local Repos
-
-To use local repositories:
-
-~~~~
-cd darkstar/@wirelineio/sdk
-yarn link
-
-cd <service name>
-yarn link "@wirelineio/sdk"
-~~~~
