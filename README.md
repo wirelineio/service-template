@@ -31,12 +31,25 @@ yarn link
 
 ## Setup
 
-### Install Packages
+### Create project
+
+- using git:
 
 ```
 git clone --depth=1 git@github.com:wirelineio/service-template.git <service name>
 cd <service name>
 rm -rf .git
+```
+- using CLI:
+
+```
+WRL_GITHUB_TOKEN=token babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.js create --template="https://github.com/wirelineio/service-template" --path="<service name>"
+cd <service name>
+```
+
+### Install Packages
+
+```
 yarn link "@wirelineio/sdk"
 yarn install
 ```
