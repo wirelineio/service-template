@@ -97,12 +97,14 @@ my-deployment                   wrn::service-template           0.0.1           
 ## Test Endpoint
 
 ```
-$ curl -s -XGET -H'Authorization: abc123' https://1k06alat20.execute-api.us-east-1.amazonaws.com/dev/test | jq
+$ export WRL_ACCESS_KEY="<INSERT ACCESS KEY HERE>"
+
+$ curl -s -XGET -H'Authorization: $WRL_ACCESS_KEY' https://1k06alat20.execute-api.us-east-1.amazonaws.com/dev/test | jq
 {
   "message": "Hello Alice"
 }
 
-$ curl -s -XGET -H'Authorization: abc123' https://1k06alat20.execute-api.us-east-1.amazonaws.com/dev/test?name=Bob | jq
+$ curl -s -XGET -H'Authorization: $WRL_ACCESS_KEY' https://1k06alat20.execute-api.us-east-1.amazonaws.com/dev/test?name=Bob | jq
 {
   "message": "Hello Bob"
 }
