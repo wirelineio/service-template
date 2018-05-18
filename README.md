@@ -31,6 +31,10 @@ yarn link
 
 ## Setup
 
+### CLI
+
+See https://github.com/wirelineio/darkstar/blob/master/%40wirelineio/cli/README.md for CLI and access key setup instructions.
+
 ### Create project
 
 - using git:
@@ -43,7 +47,7 @@ rm -rf .git
 - using CLI:
 
 ```
-WRL_GITHUB_TOKEN=token babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.js create --template="https://github.com/wirelineio/service-template" --path="<service name>"
+WRL_GITHUB_TOKEN=token wrl create --template="https://github.com/wirelineio/service-template" --path="<service name>"
 cd <service name>
 ```
 
@@ -61,11 +65,11 @@ Edit service.yml and stack.yml and change the service and stack names.
 ## Service Register
 
 ```
-$ WRL_ACCESS_KEY=abc123 babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.js build
+$ wrl build
 ```
 
 ```
-$ WRL_ACCESS_KEY=abc123 babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.js service register --domain example.com
+$ wrl service register --domain example.com
 
 Domain           Name                            Version         Content Hash                                                            Versions
 ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -75,7 +79,7 @@ example.com      service-template                0.0.1           52cdbe12f3119fb
 ## Stack Deploy
 
 ```
-$ WRL_ACCESS_KEY=abc123 babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.js stack deploy
+$ wrl stack deploy
 
 Name                            Service                         Version         Status          Content Hash                                                            Endpoint
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -83,7 +87,7 @@ my-deployment                   wrn::service-template           0.0.1           
 ```
 
 ```
-$ WRL_ACCESS_KEY=abc123 babel-node ~/wireline/darkstar/@wirelineio/cli/src/main.js stack deploy
+$ wrl stack deploy
 
 Name                            Service                         Version         Status          Content Hash                                                            Endpoint
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
