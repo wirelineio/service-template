@@ -52,9 +52,12 @@ cd <service name>
 ```
 
 ### Install Packages
+```
+# INTERNAL-ONLY. Remove 'yarn link' when current SDK published to NPM.
+yarn link "@wirelineio/sdk"
+```
 
 ```
-yarn link "@wirelineio/sdk"
 yarn install
 ```
 
@@ -65,11 +68,11 @@ Edit service.yml and stack.yml and change the service and stack names.
 ## Service Register
 
 ```
-$ wrl build
+$ wire build
 ```
 
 ```
-$ wrl service register --domain example.com
+$ wire service register --domain example.com
 
 Domain           Name                            Version         Content Hash                                                            Versions
 ---------------------------------------------------------------------------------------------------------------------------------------------------
@@ -79,7 +82,7 @@ example.com      service-template                0.0.1           52cdbe12f3119fb
 ## Stack Deploy
 
 ```
-$ wrl stack deploy
+$ wire stack deploy
 
 Name                            Service                         Version         Status          Content Hash                                                            Endpoint
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -87,7 +90,7 @@ my-deployment                   wrn::service-template           0.0.1           
 ```
 
 ```
-$ wrl stack deploy
+$ wire stack deploy
 
 Name                            Service                         Version         Status          Content Hash                                                            Endpoint
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

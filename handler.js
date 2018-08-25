@@ -13,8 +13,8 @@ module.exports = {
   test: Wireline.exec(async (event, context, response) => {
     let { name='Alice' } = event.queryStringParameters || {};
 
-    response.send({
+    return {
       message: `Hello ${name}`
-    });
+    };
   })
 };
