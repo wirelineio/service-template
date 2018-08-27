@@ -14,7 +14,7 @@
     "zip-webpack-plugin": "^2.1.0"
   },
   "dependencies": {
-    "@wirelineio/sdk": "0.0.1",
+    "@wirelineio/sdk": "^0.1.0",
     "source-map-support": "^0.5.4"
   }
 }
