@@ -1,34 +1,5 @@
 # Wireline Service Template.
 
-## INTERNAL ONLY
-
-The `darkstar` framework packages are currently internal to the Wireline team; they require private access to the @wirelineio org.
-
-### Private Repos
-
-https://www.npmjs.com/org/wirelineio
-
-~~~~
-npm login                       # NOTE: Must preceed yarn login.
-yarn login
-~~~~
-
-Check auth tokens: `~/.npmrc`
-
-
-### Local Repos
-
-To use local repositories:
-
-~~~~
-cd darkstar
-yarn install
-
-cd darkstar/@wirelineio/sdk
-yarn link
-~~~~
-
-
 ## Setup
 
 ### CLI
@@ -39,25 +10,21 @@ See https://github.com/wirelineio/darkstar/blob/master/%40wirelineio/cli/README.
 
 - using git:
 
-```
+```bash
 git clone --depth=1 git@github.com:wirelineio/service-template.git <service name>
 cd <service name>
 rm -rf .git
 ```
 - using CLI:
 
-```
+```bash
 WRL_GITHUB_TOKEN=token wire create --template="https://github.com/wirelineio/service-template" --path="<service name>"
 cd <service name>
 ```
 
 ### Install Packages
-```
-# INTERNAL-ONLY. Remove 'yarn link' when current SDK published to NPM.
-yarn link "@wirelineio/sdk"
-```
 
-```
+```bash
 yarn install
 ```
 
@@ -67,7 +34,7 @@ Edit service.yml and stack.yml and change the service and stack names.
 
 ## Service Register
 
-```
+```bash
 $ wire build
 ```
 
@@ -99,7 +66,7 @@ my-deployment                   wrn::service-template           0.0.1           
 
 ## Test Endpoint
 
-```
+```bash
 $ export WRL_ACCESS_KEY="<INSERT ACCESS KEY HERE>"
 
 $ curl -s -XGET -H'Authorization: $WRL_ACCESS_KEY' https://1k06alat20.execute-api.us-east-1.amazonaws.com/dev/test | jq
