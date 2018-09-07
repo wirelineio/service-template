@@ -1,3 +1,15 @@
 {
-  "presets": ["env"]
+  "presets": [
+    ["env", {
+      "debug": true,
+      "targets": {
+        "node": "6.10"
+      }
+    }]
+  ],
+
+  "plugins": [
+    "add-module-exports",
+    "transform-runtime"
+  ]
 }

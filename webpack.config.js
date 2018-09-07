@@ -13,6 +13,8 @@ module.exports = {
 
   stats: 'errors-only',
 
+  mode: 'development',
+
   entry: {
     handler: [
       'babel-polyfill', path.resolve('./handler.js')
