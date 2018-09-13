@@ -11,15 +11,15 @@ See https://github.com/wirelineio/darkstar/blob/master/%40wirelineio/cli/README.
 - using git:
 
 ```bash
-git clone --depth=1 git@github.com:wirelineio/service-template.git <service name>
-cd <service name>
+git clone --depth=1 git@github.com:wirelineio/service-template.git <service_name>
+cd <service_name>
 rm -rf .git
 ```
 - using CLI:
 
 ```bash
-wire create --template="https://github.com/wirelineio/service-template" --path="<service name>"
-cd <service name>
+wire create --template="https://github.com/wirelineio/service-template" --path="<service_name>"
+cd <service_name>
 ```
 
 ### Install Packages
