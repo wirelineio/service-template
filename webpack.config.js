@@ -16,9 +16,7 @@ module.exports = {
   mode: 'development',
 
   entry: {
-    handler: [
-      'babel-polyfill', path.resolve('./handler.js')
-    ]
+    handler: path.resolve('./handler.js')    
   },
 
   output: {
