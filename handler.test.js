@@ -1,5 +1,5 @@
 const request = require("supertest");
-const { createDevServer } = require("@wirelineio/cli/dev_server");
+const { createDevServer } = require("@wirelineio/cli/dist/es/lib/dev_server");
 
 let server;
 
@@ -12,7 +12,7 @@ test("GET /test", done =>
     .get("/test")
     .expect(200)
     .expect(response =>
-      expect(response.body).toMatchObject({ message: "Hello Wireline" })
+      expect(response.body).toMatchObject({ message: "Hello, Wireline!" })
     )
     .end(err => done(err)));
 
@@ -21,6 +21,6 @@ test("GET /test?name=Bob", done =>
     .get("/test?name=Bob")
     .expect(200)
     .expect(response =>
-      expect(response.body).toMatchObject({ message: "Hello Bob" })
+      expect(response.body).toMatchObject({ message: "Hello, Bob!" })
     )
     .end(err => done(err)));
