@@ -71,12 +71,55 @@ $ export WRL_ACCESS_KEY="<INSERT ACCESS KEY HERE>"
 
 $ curl -s -XGET -H'Authorization: $WRL_ACCESS_KEY' https://1k06alat20.execute-api.us-east-1.amazonaws.com/dev/test | jq
 {
-  "message": "Hello Wireline"
+  "message": "Hello, Wireline!"
 }
 
 $ curl -s -XGET -H'Authorization: $WRL_ACCESS_KEY' https://1k06alat20.execute-api.us-east-1.amazonaws.com/dev/test?name=Bob | jq
 {
-  "message": "Hello Bob"
+  "message": "Hello, Bob!"
 }
 ```
 
+## Development
+
+Run service locally with `yarn dev`:
+
+```bash
+$ yarn dev
+yarn run v1.12.3
+$ wire dev
+Loading: /wrl-tests/test-service-template/webpack.config.js
+
+...
+
+Configuring Endpoints....
+Mapping GET /test => handler.test cors: true
+Dev Server listening on port 3000!
+
+```
+
+Then open another terminal to test the endpoint on `http://localhost:3000`
+
+```bash
+$ curl http://localhost:3000/test | jq
+{
+  "message": "Hello, Wireline!"
+}
+```
+
+### Run test
+
+Run tests with `yarn test`:
+
+```
+$ yarn test
+yarn run v1.12.3
+$ jest --silent
+ PASS  ./handler.test.js (5.222s)
+
+Test Suites: 1 passed, 1 total
+Tests:       2 passed, 2 total
+Snapshots:   0 total
+Time:        5.96s
+✨  Done in 7.29s.
+```
