@@ -1,5 +1,5 @@
 const request = require("supertest");
-const { createDevServer } = require("@wirelineio/cli/dist/es/lib/dev_server");
+const { createDevServer } = require("@wirelineio/cli/dev_server");
 
 let server;
 
